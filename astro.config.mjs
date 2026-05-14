@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://flerepatienter.dk',
+  site: 'https://bunica.dk',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]

@@ -7,27 +7,27 @@ interface Props {
 }
 
 const {
-  title = 'Flerepatienter.dk – Tandlæge Markedsføring der Virker',
-  description = 'Få flere patienter til din tandlægeklinik. Elvis Demirovic hjælper tandlæger med at blive synlige online og fylde kalenderen med nye bookinger.',
+  title = 'Bunica – Luk hullerne i din kunderejse',
+  description = 'Elvis Demirovic hjælper virksomheder med at forvandle besøgende til kunder ved at lukke hullerne i kunderejsen.',
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, 'https://flerepatienter.dk').href;
+const canonicalURL = new URL(Astro.url.pathname, 'https://bunica.dk').href;
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Flerepatienter.dk',
-  description: 'Markedsføring for tandlæger – flere synlige, flere bookinger.',
-  url: canonicalURL,
+  name: 'Bunica',
+  description: 'Kunderejse-optimering – forvandl besøgende til kunder.',
+  url: 'https://bunica.dk',
   telephone: '+4581530540',
-  email: 'jatak@flerepatienter.dk',
+  email: 'hej@bunica.dk',
   founder: {
     '@type': 'Person',
     name: 'Elvis Demirovic',
   },
   areaServed: 'DK',
   inLanguage: 'da',
-  serviceType: 'Tandlæge markedsføring',
+  serviceType: 'Kunderejse optimering',
 };
 ---
 
@@ -48,7 +48,7 @@ const schema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="da_DK" />
-    <meta property="og:site_name" content="Flerepatienter.dk" />
+    <meta property="og:site_name" content="Bunica" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
