@@ -1,0 +1,66 @@
+---
+const holes = [
+  { number: '01', title: 'De finder dig ikke', text: 'Din klinik dukker ikke op, når nye patienter søger tandlæge online.' },
+  { number: '02', title: 'De stoler ikke på dig endnu', text: 'Manglende anmeldelser eller et forældet website sender dem videre.' },
+  { number: '03', title: 'De booker ikke', text: 'De ville gerne – men det er for besværligt at komme igennem.' },
+];
+---
+
+<section id="de-skjulte-huller" class="py-24 bg-[#FFF7F0]">
+  <div class="max-w-6xl mx-auto px-5">
+
+    <div class="grid lg:grid-cols-[5fr_7fr] gap-12 items-center">
+
+      <!-- Tekst-side -->
+      <div>
+        <div class="reveal inline-block bg-navy/8 text-navy text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full mb-5">
+          De skjulte huller
+        </div>
+
+        <h2 class="reveal reveal-delay-1 text-4xl md:text-5xl font-extrabold text-navy mb-6">
+          Derfor mister du patienter –<br />
+          <span class="text-[#F97316]">uden at vide det</span>
+        </h2>
+
+        <div class="space-y-4 mb-8">
+          {holes.map((hole, i) => (
+            <div class={`reveal reveal-delay-${i + 1} flex gap-4 group`}>
+              <div class="shrink-0 w-11 h-11 rounded-xl bg-navy text-white flex items-center justify-center text-sm font-bold group-hover:bg-[#F97316] transition-colors duration-300 mt-0.5">
+                {hole.number}
+              </div>
+              <div>
+                <h3 class="font-bold text-navy text-[17px] mb-1">{hole.title}</h3>
+                <p class="text-muted text-[14px] leading-relaxed">{hole.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <a
+          href="#moed-elvis"
+          class="reveal inline-flex items-center gap-2 text-[#F97316] font-semibold hover:gap-3 transition-all duration-200"
+        >
+          Lær hvordan vi løser det
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Billede -->
+      <div class="reveal reveal-delay-2">
+        <a href="/de-3-huller" class="block rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl hover:scale-[1.02] transition-all duration-300">
+          <img
+            src="/images/de-3-grunde.webp"
+            alt="De 3 grunde til at du mister patienter du allerede har betalt for"
+            width="1280"
+            height="720"
+            class="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

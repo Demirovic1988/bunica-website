@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const CALENDLY = 'https://calendly.com/jatak-flerepatienter/30min';
+---
+
+<Layout
+  title="De 3 huller – Flerepatienter.dk"
+  description="Se de 3 fejl der får potentielle patienter til at vælge en anden klinik – og hvordan du lukker hullerne i din kunderejse."
+>
+  <Header />
+
+  <main style="padding-top: 90px;">
+
+    <!-- Hero tekst -->
+    <section class="py-16 bg-gradient-to-br from-[#FFF7F0] via-[#F8FAFC] to-white">
+      <div class="max-w-4xl mx-auto px-5 text-center">
+
+        <h1 class="text-4xl md:text-5xl font-extrabold text-navy mb-5 leading-tight">
+          De fleste tandklinikker mister patienter,<br class="hidden md:block" />
+          <span class="text-[#F97316]">de allerede har betalt for</span>
+        </h1>
+
+        <p class="text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+          Se de 3 fejl der får potentielle patienter til at vælge en anden klinik –
+          og hvordan du lukker hullerne i din kunderejse.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Video + CTA -->
+    <section class="bg-[#F8FAFC] py-12 pb-24">
+      <div class="max-w-4xl mx-auto px-5">
+        <div class="rounded-2xl overflow-hidden shadow-2xl" style="position: relative; padding-top: 56.25%;">
+          <iframe
+            src="https://www.youtube.com/embed/k_iW41YMc_c"
+            title="De 3 huller – Elvis Demirovic"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="mt-14 text-center">
+          <a
+            href="https://form.bunica.dk"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center bg-[#F97316] hover:bg-[#ea6c0a] text-white font-bold text-xl px-12 py-5 rounded-2xl transition-all duration-200 shadow-xl shadow-[#F97316]/25 hover:-translate-y-0.5 w-full whitespace-nowrap"
+          >
+            Besvar 5 spørgsmål og se, hvordan du kan få flere bookinger
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
