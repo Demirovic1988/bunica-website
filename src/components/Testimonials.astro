@@ -52,6 +52,16 @@ const reviews = [
     date: 'april 2022',
   },
   {
+  {
+    name: 'Christian Hamerslag',
+    company: 'Realretro.dk',
+    initials: 'CH',
+    color: '#37c760',
+    image: '/images/christian-hamerslag.jpg',
+    text: 'Jeg mødte Elvis, da han kom for at købe en lænestol fra mig. Vi faldt i snak om hans arbejde, og jeg besluttede at prøve hans tjenester. Elvis foreslog, at vi skulle sætte min butik med retromøbler på nettet. Han lavede en ny webshop for mig, og han hjalp også med at gøre den synlig på Google. Nu er vi blandt de tre øverste resultater, når man søger efter retromøbler og mange andre søgeord.',
+    date: '',
+  },
+  {
     name: 'Dennis Ditlev',
     company: 'Hornbækdeluxe',
     initials: 'DD',
@@ -140,7 +150,7 @@ const reviews = [
 <script>
   const track = document.getElementById('tp-track') as HTMLElement;
   const dots = document.querySelectorAll<HTMLElement>('.tp-dot');
-  const TOTAL = 7;
+  const TOTAL = 8;
   let current = 0;
   let timer: ReturnType<typeof setInterval>;
 
