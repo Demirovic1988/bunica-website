@@ -48,6 +48,15 @@ const reviews = [
     text: 'Jeg har ikke bare fået en leverandør, men en dedikeret samarbejdspartner. Elvis har altid haft en høj grad af gennemsigtighed i hans arbejde, og det har gjort at jeg fra starten har følt mig i helt trygge hænder. Samarbejdet har fra første færd skabt synlige resultater.',
     date: 'april 2022',
   },
+  {
+    name: 'Dennis Ditlev',
+    company: 'Hornbækdeluxe',
+    initials: 'DD',
+    color: '#37c760',
+    image: '/images/dennis-ditlev.jpg',
+    text: 'Jeg er ejer af Hornbæk Deluxe og kan varmt anbefale Elvis for hans fantastiske arbejde. Elvis har lavet en super hjemmeside for os, som vores kunder elsker. Han har også hjulpet os med at blive mere synlige online gennem Google og har øget antallet af kunder vi får ind. Elvis er både professionel og pålidelig.',
+    date: '',
+  },
 ];
 ---
 
@@ -88,10 +97,10 @@ const reviews = [
             <p class="text-[#2a2a2a] text-[14px] leading-relaxed flex-1 mb-5">{r.text}</p>
             <!-- Person -->
             <div class="flex items-center gap-3 pt-4 border-t border-[#f1f5f9]">
-              <div
-                class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
-                style={`background:${r.color}; color:${r.color === '#bfd0e0' ? '#0a112d' : '#fff'};`}
-              >{r.initials}</div>
+              {r.image
+                ? <img src={r.image} alt={r.name} class="w-10 h-10 rounded-full object-cover shrink-0" />
+                : <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0" style={`background:${r.color}; color:${r.color === '#bfd0e0' ? '#0a112d' : '#fff'};`}>{r.initials}</div>
+              }
               <div>
                 <div class="font-semibold text-[#0a112d] text-sm">{r.name}</div>
                 <div class="text-[#5a6a7e] text-xs">{r.company ? r.company + ' · ' : ''}{r.date}</div>
@@ -128,7 +137,7 @@ const reviews = [
 <script>
   const track = document.getElementById('tp-track') as HTMLElement;
   const dots = document.querySelectorAll<HTMLElement>('.tp-dot');
-  const TOTAL = 6;
+  const TOTAL = 7;
   let current = 0;
   let timer: ReturnType<typeof setInterval>;
 
