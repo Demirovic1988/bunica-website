@@ -8,7 +8,7 @@ const logos = [
   { src: '/images/logos/Preloved-125x70-1.webp',        alt: 'Preloved Electronics' },
   { src: '/images/logos/Hornbaek-Deluxe-125x70-1.webp', alt: 'Hornbæk Deluxe Beauty & Wellness' },
   { src: '/images/logos/NU-125x70-1.webp',              alt: 'NÜ Denmark' },
-  { src: '/images/logos/assentoft-tomrer.webp',         alt: 'TF Assentoft Tømrerfirma' },
+  { src: '/images/logos/assentoft-tomrer.webp',         alt: 'TF Assentoft Tømrerfirma', maxWidth: '125px' },
 ];
 ---
 
@@ -25,6 +25,7 @@ const logos = [
           width="125"
           height="70"
           class="shrink-0 h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          style={logo.maxWidth ? `max-width: ${logo.maxWidth}` : undefined}
           loading="lazy"
         />
       ))}
