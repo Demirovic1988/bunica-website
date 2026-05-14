@@ -1,14 +1,6 @@
 ---
 const reviews = [
   {
-    name: 'Lasse Thomsen',
-    company: '',
-    initials: 'LT',
-    color: '#37c760',
-    text: 'Vi har arbejdet sammen med Bunica i en periode nu og har haft en god oplevelse. Der er blevet arbejdet seriøst med SEO og vores online tilstedeværelse, og selvom det tager tid at se resultater, kan vi mærke en positiv udvikling. Samarbejdet har været præget af ærlig rådgivning og en god forståelse for vores behov.',
-    date: 'april 2026',
-  },
-  {
     name: 'Fredslund Advokatfirma',
     company: 'Advokatfirma',
     initials: 'FA',
@@ -37,7 +29,7 @@ const reviews = [
   },
   {
     name: 'Torsten Hartvig Rasmussen',
-    company: '',
+    company: 'Computrade ApS',
     initials: 'TR',
     color: '#0a112d',
     image: '/images/torsten.jpg',
@@ -148,7 +140,7 @@ const reviews = [
 <script>
   const track = document.getElementById('tp-track') as HTMLElement;
   const dots = document.querySelectorAll<HTMLElement>('.tp-dot');
-  const REAL = 8;
+  const REAL = 7;
   let current = 0;
   let timer: ReturnType<typeof setInterval>;
   let transitioning = false;
